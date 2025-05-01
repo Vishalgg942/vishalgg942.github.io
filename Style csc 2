@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.places, .gallery {
+  padding: 20px;
+}
+
+.place {
+  background-color: #eee;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.gallery h2 {
+  text-align: center;
+}
+
+.gallery .images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
