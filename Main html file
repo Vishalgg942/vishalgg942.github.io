@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Tourism</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav style="background-color: #4CAF50; padding: 1rem; text-align: center;">
+    <a href="#home" style="margin: 0 15px; color: white; text-decoration: none;">Home</a>
+    <a href="#places" style="margin: 0 15px; color: white; text-decoration: none;">Places</a>
+    <a href="#gallery" style="margin: 0 15px; color: white; text-decoration: none;">Gallery</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to Indian Tourism</h1>
+    <p>Explore the Famous Places of India</p>
+  </section>
+
+  <!-- Famous Places Section -->
+  <section id="places" class="content">
+    <h2>Famous Places of India</h2>
+
+    <div class="place-card">
+      <h3>Taj Mahal, Agra</h3>
+      <p>One of the Seven Wonders of the World, symbol of eternal love.</p>
+    </div>
+
+    <div class="place-card">
+      <h3>Jaipur, Rajasthan</h3>
+      <p>The Pink City known for its royal palaces and forts.</p>
+    </div>
+
+    <div class="place-card">
+      <h3>Kerala Backwaters</h3>
+      <p>Known for its tranquil backwaters and lush green landscapes.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="content">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/tajmahal.jpg" alt="Taj Mahal" />
+      <img src="images/jaipur.jpg" alt="Jaipur" />
+      <img src="images/kerala.jpg" alt="Kerala Backwaters" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #f1f1f1; text-align: center; padding: 1rem; margin-top: 2rem;">
+    <p>© 2025 Vishal Kumar | Indian Tourism</p>
+  </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indian Tourism</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Indian Tourism</h1>
+    <p>Explore the Famous Places of India</p>
+  </header>
+
+  <section class="famous-places">
+    <h2>Famous Places of India</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Taj Mahal, Agra</h3>
+        <p>One of the Seven Wonders of the World, symbol of eternal love.</p>
+      </div>
+      <div class="card">
+        <h3>Jaipur, Rajasthan</h3>
+        <p>The Pink City known for royal palaces and forts.</p>
+      </div>
+      <div class="card">
+        <h3>Kerala Backwaters</h3>
+        <p>Tranquil backwaters and lush green landscapes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="images">
+      <img src="https://source.unsplash.com/200x150/?tajmahal" alt="Taj Mahal" />
+      <img src="https://source.unsplash.com/200x150/?rajasthan" alt="Rajasthan" />
+      <img src="https://source.unsplash.com/200x150/?kerala" alt="Kerala" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Indian Tourism. All rights reserved.</p>
+  </footer>
+</body>
+</html>
