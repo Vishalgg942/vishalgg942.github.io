@@ -1,197 +1,197 @@
-/* Reset and base styles */
+/* Google Fonts (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #f7f7f7;
-  color: #222;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-/* Navigation Bar */
+/* Navbar Styles */
 nav {
-  background-color: #0077cc;
-  padding: 16px 0;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: linear-gradient(135deg, #6e48aa, #9d50bb);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
-  color: #fff;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav li a {
+  color: white;
   text-decoration: none;
-  margin: 0 18px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.2s;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: #ffd700;
+nav li a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Hero Section */
 .hero {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg') center/cover no-repeat;
-  height: 320px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 1;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 2;
+  padding: 5rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  background: rgba(0,0,0,0.5);
-  padding: 10px 24px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-  font-size: 1.25rem;
-  background: rgba(0,0,0,0.35);
-  padding: 7px 16px;
-  border-radius: 5px;
-  display: inline-block;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 /* Section Headings */
 .section {
-  padding: 40px 20px 20px 20px;
-  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section h2 {
-  font-size: 2rem;
-  margin-bottom: 24px;
-  color: #0077cc;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6e48aa;
+  font-size: 2.2rem;
+  position: relative;
 }
 
-/* News Cards */
+.section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #9d50bb;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* Card Styles (News Section) */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  margin-top: 10px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .card {
-  background: #fff;
-  padding: 22px 18px;
-  width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-  text-align: left;
-  transition: transform 0.18s;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
-  color: #0077cc;
-  margin-bottom: 10px;
-  font-size: 1.25rem;
+  color: #6e48aa;
+  margin-bottom: 0.5rem;
 }
 
-/* Gallery */
+/* Gallery Styles (Famous Places) */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .gallery-item {
-  width: 320px;
-  background: #fff;
-  border-radius: 10px;
+  background: white;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-  transition: transform 0.18s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+  transform: scale(1.03);
 }
 
 .gallery-item img {
   width: 100%;
-  height: 210px;
+  height: 200px;
   object-fit: cover;
-  display: block;
+  border-bottom: 3px solid #9d50bb;
 }
 
 .gallery-item p {
-  padding: 14px 12px;
-  background: #f0f0f0;
-  font-size: 1.08rem;
-  color: #222;
-  text-align: left;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Footer */
+.gallery-item strong {
+  color: #6e48aa;
+  font-size: 1.1rem;
+}
+
+/* Footer Styles */
 footer {
-  background: #222;
-  color: #fff;
+  background: linear-gradient(135deg, #6e48aa, #9d50bb);
+  color: white;
   text-align: center;
-  padding: 22px 0;
-  margin-top: 40px;
-  letter-spacing: 1px;
-  font-size: 1rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-  .card-container,
-  .gallery {
+@media (max-width: 768px) {
+  nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 0.5rem;
   }
-  .card,
-  .gallery-item {
-    width: 90vw;
-    max-width: 400px;
-  }
-  .hero {
-    height: 200px;
-  }
+
   .hero h1 {
-    font-size: 1.5rem;
-    padding: 7px 12px;
+    font-size: 2.2rem;
   }
-  .hero p {
-    font-size: 1rem;
-    padding: 5px 8px;
+
+  .section {
+    padding: 2rem 1rem;
   }
-                              }
+}
