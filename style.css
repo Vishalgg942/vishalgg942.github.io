@@ -1,146 +1,306 @@
-body {
-  font-family: 'Poppins', sans-serif;
+/* ====== बेसिक रीसेट एंड टाइपोग्राफी ====== */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== नेविगेशन बार ====== */
 nav {
   background-color: #003366;
-  padding: 10px 0;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 2rem;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
+nav a:hover, 
+nav a.active {
+  background-color: #0055aa;
+  transform: translateY(-2px);
+}
+
+/* ====== हीरो सेक्शन ====== */
 .hero {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to right, #004080, #0066cc);
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #004080, #0066cc);
   color: white;
+  margin-bottom: 2rem;
 }
 
 .hero h1 {
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ====== मुख्य कंटेंट सेक्शन ====== */
 .section {
-  padding: 30px 20px;
+  padding: 2rem 1rem;
+  flex: 1;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 20px;
   color: #003366;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
 }
 
+.section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #0066cc;
+  margin: 0.5rem auto;
+}
+
+/* ====== कार्ड सिस्टम ====== */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .card {
   background: white;
-  padding: 20px;
+  padding: 1.5rem;
   border-radius: 10px;
-  width: 280px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== गैलरी सिस्टम ====== */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .gallery-item {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  text-align: center;
-  padding-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
 }
 
 .gallery-item img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
 
-.search-bar {
-  margin: 20px auto;
-  max-width: 500px;
+.gallery-item h3 {
+  padding: 1rem;
+  color: #003366;
 }
 
-/* Contact Form Styles */
+/* ====== कॉन्टैक्ट फॉर्म ====== */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #003366;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
 .contact-form textarea {
-  min-height: 100px;
+  min-height: 150px;
   resize: vertical;
 }
 
 .contact-form button {
-  padding: 12px;
   background-color: #003366;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .contact-form button:hover {
   background-color: #0055aa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== प्राइवेसी पॉलिसी कंटेंट ====== */
+.privacy-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-content h2 {
+  color: #003366;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+}
+
+.privacy-content p {
+  margin-bottom: 1rem;
+}
+
+.privacy-content ul {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ====== फुटर ====== */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.social-links {
+  margin-top: 1rem;
 }
 
 .social-links a {
   color: #aadfff;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
-footer {
-  background-color: #003366;
+.social-links a:hover {
   color: white;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
+}
+
+/* ====== रिस्पॉन्सिव डिज़ाइन ====== */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+  
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
 }
