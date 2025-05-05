@@ -1,65 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Contact us for Indian Tourism News or Suggestions"/>
-  <title>Contact - Indian Tourism</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* मोबाइल फ्रेंडली स्टाइल्स */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .contact-form input, 
-      .contact-form textarea {
-        width: 90%;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Indian Tourism for inquiries, suggestions or feedback about travel destinations in India">
+  <title>Contact Us - Indian Tourism</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <nav>
+  <!-- Skip to Content Link for Accessibility -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav aria-label="Main navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Famous Places</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="places.html">Famous Places</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="hero">
-    <h1>Contact Us</h1>
-    <p>Have a question or suggestion? Get in touch with us.</p>
-  </div>
+  <header class="hero" role="banner">
+    <div class="hero-content">
+      <h1>Contact Indian Tourism</h1>
+      <p class="subtitle">We'd love to hear from you! Send your questions, suggestions or feedback.</p>
+    </div>
+  </header>
 
-  <section class="section">
+  <main id="main-content" class="section">
     <div class="card-container">
-      <div class="card" style="width: 100%; max-width: 600px; margin: 0 auto;">
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your name">
+      <div class="contact-card">
+        <div class="contact-methods">
+          <div class="contact-info">
+            <h2>Other Ways to Reach Us</h2>
+            <address>
+              <p><strong>Email:</strong> <a href="mailto:contact@indiantourism.example">contact@indiantourism.example</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+9118001234567">+91 1800 123 4567</a></p>
+              <p><strong>Address:</strong> 123 Tourism Plaza, New Delhi, India 110001</p>
+            </address>
+            
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="assets/icons/facebook.svg" alt="Facebook" width="32" height="32">
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <img src="assets/icons/twitter.svg" alt="Twitter" width="32" height="32">
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="assets/icons/instagram.svg" alt="Instagram" width="32" height="32">
+              </a>
+            </div>
+          </div>
 
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required placeholder="Enter your email">
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form" aria-labelledby="contact-form-heading">
+            <h2 id="contact-form-heading">Send Us a Message</h2>
+            
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your full name" aria-required="true">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email" aria-required="true">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="feedback">Feedback</option>
+                <option value="business">Business Partnership</option>
+                <option value="press">Press Inquiry</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Type your message here..." aria-required="true"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-icon">→</span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Indian Tourism News | All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="privacy.html">Privacy Policy</a>
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <p>&copy; <span id="current-year">2025</span> Indian Tourism | All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Form submission feedback
+    const form = document.querySelector('.contact-form');
+    if(form) {
+      form.addEventListener('submit', function(e) {
+        // Add your form handling logic here
+        // e.preventDefault(); // Uncomment if handling with AJAX
+      });
+    }
+  </script>
 </body>
 </html>
