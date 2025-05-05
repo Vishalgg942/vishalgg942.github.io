@@ -1,37 +1,24 @@
-# Indian Tourism Website
+# 🌍 Indian Tourism Website
 
-Welcome to the Indian Tourism website project! This website showcases some of the most famous tourist destinations in India with a clean and responsive layout.
+![GitHub last commit](https://img.shields.io/github/last-commit/vishalgg942/vishalgg942.github.io?color=green)
+![GitHub repo size](https://img.shields.io/github/repo-size/vishalgg942/vishalgg942.github.io)
+![GitHub](https://img.shields.io/github/license/vishalgg942/vishalgg942.github.io)
 
-## Features
+Welcome to the official repository for the **Indian Tourism Website** – a showcase of India's rich cultural heritage, breathtaking landscapes, and popular travel destinations.
 
-- Responsive design using HTML and CSS
-- Sections for:
-  - Introduction
-  - Famous Places
-  - Image Gallery
-- Beautiful layout with clean font and color styles
+## 🚀 Live Demo
+👉 [Visit Website](https://vishalgg942.github.io)
 
-## Files Included
+## ✨ Features
+- **Responsive Design**: Works on mobile, tablet and desktop
+- **Interactive Gallery**: Beautiful images of Indian destinations
+- **Contact Form**: For visitor inquiries
+- **Privacy Policy**: GDPR compliant page
+- **Fast Loading**: Optimized assets for better performance
 
-- `index.html` – Main HTML file with all the website content
-- `style.css` – External CSS file for styling
+## 🛠 Technologies Used
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Hosting**: GitHub Pages
+- **Version Control**: Git
 
-## Preview
-
-The website includes the following famous places:
-- Taj Mahal, Agra
-- Jaipur, Rajasthan
-- Kerala Backwaters
-
-Each place includes a brief description and image.
-
-## How to Run
-
-You can open the website locally in your browser:
-
-1. Download or clone the repository.
-2. Open `index.html` in any web browser.
-
-## Author
-
-Created by Vishal Kumar
+## 📂 Project Structure
