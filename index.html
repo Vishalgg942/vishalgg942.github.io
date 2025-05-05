@@ -3,183 +3,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover latest Indian tourism news and explore famous heritage sites, cultural destinations and must-visit places across India">
-  <meta name="keywords" content="India tourism, Taj Mahal, travel news, heritage sites, famous places in India">
-  <title>Indian Tourism | Latest News & Famous Places to Visit</title>
+  <meta name="description" content="Discover India's rich cultural heritage and must-visit tourist destinations. Latest tourism news and travel guides for famous places like Taj Mahal, Varanasi, and more.">
+  <meta name="keywords" content="India tourism, Taj Mahal, travel guide, heritage sites, famous places in India">
+  <title>Indian Tourism | Explore Incredible India</title>
   <link rel="canonical" href="https://vishalgg942.github.io">
   
   <!-- Preload critical resources -->
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" as="style">
   <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="assets/logo.svg" as="image">
   
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  
-  <!-- Google Search Console verification (optional) -->
-  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   
   <!-- Structured data for SEO -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
+      "@type": "TouristDestination",
       "name": "Indian Tourism",
+      "description": "Official portal for exploring India's rich cultural heritage and tourist destinations",
       "url": "https://vishalgg942.github.io",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://vishalgg942.github.io/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "India"
       }
     }
   </script>
-  
-  <!-- Google Custom Search -->
-  <script async src="https://cse.google.com/cse.js?cx=365511acb7af043ce"></script>
 </head>
 
 <body>
   <!-- Skip to content link for accessibility -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
   
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="places.html">Famous Places</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <header class="hero" role="banner">
-    <div class="hero-content">
-      <h1>Discover the Wonders of Indian Tourism</h1>
-      <p class="subtitle">Explore heritage sites, cultural destinations and latest travel updates across India</p>
+  <!-- Header with logo and navigation -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="Indian Tourism Logo" width="120" height="60">
+      </a>
       
-      <div class="search-bar" role="search">
-        <div class="gcse-search" data-enableHistory="true" data-queryParameterName="q"></div>
-      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="places.html">Destinations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <span class="menu-icon"></span>
+      </button>
     </div>
   </header>
 
+  <!-- Hero Banner -->
+  <section class="hero" role="region" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <h1 id="hero-heading">Discover Incredible India</h1>
+      <p class="subtitle">Explore the land of diverse cultures, rich heritage, and breathtaking landscapes</p>
+      
+      <div class="cta-buttons">
+        <a href="places.html" class="btn primary">Explore Destinations</a>
+        <a href="news.html" class="btn secondary">Latest News</a>
+      </div>
+    </div>
+    
+    <div class="hero-image">
+      <img src="assets/hero-image.jpg" alt="Panoramic view of Indian landscape" loading="eager" width="1600" height="900">
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <main id="main-content">
-    <section class="section" aria-labelledby="news-heading">
+    <!-- Featured News Section -->
+    <section class="featured-news" aria-labelledby="featured-news-heading">
       <div class="section-header">
-        <h2 id="news-heading">Latest Tourism News</h2>
-        <p class="section-description">Stay updated with recent developments in Indian tourism sector</p>
+        <h2 id="featured-news-heading">Tourism Updates</h2>
+        <p class="section-description">Latest developments in Indian tourism sector</p>
       </div>
       
-      <div class="card-container">
-        <article class="card" tabindex="0">
-          <div class="card-content">
-            <h3>Tourism Boom in India</h3>
-            <p>India welcomed over 10 million foreign tourists in 2023, with historical sites being the top attractions. The Taj Mahal alone saw 7 million visitors.</p>
-            <a href="news/tourism-boom.html" class="read-more" aria-label="Read more about Tourism Boom">Read more →</a>
+      <div class="news-grid">
+        <article class="news-card" tabindex="0">
+          <div class="news-image">
+            <img src="assets/news1.jpg" alt="Tourists visiting Taj Mahal" loading="lazy" width="400" height="300">
+          </div>
+          <div class="news-content">
+            <span class="news-category">Visitor Statistics</span>
+            <h3>Record Tourism Numbers in 2023</h3>
+            <p>India welcomed over 10 million foreign tourists last year, with historical sites being the top attractions.</p>
+            <a href="news/tourism-boom.html" class="read-more" aria-label="Read more about tourism statistics">Read more</a>
           </div>
         </article>
         
-        <article class="card" tabindex="0">
-          <div class="card-content">
-            <h3>New Facilities at Monuments</h3>
-            <p>ASI announces multilingual audio guides, wheelchair access and night viewing at 50 major heritage sites across India.</p>
-            <a href="news/new-facilities.html" class="read-more" aria-label="Read more about New Facilities">Read more →</a>
+        <article class="news-card" tabindex="0">
+          <div class="news-image">
+            <img src="assets/news2.jpg" alt="New facilities at historical site" loading="lazy" width="400" height="300">
+          </div>
+          <div class="news-content">
+            <span class="news-category">Facility Upgrade</span>
+            <h3>New Amenities at Heritage Sites</h3>
+            <p>Government announces multilingual guides and wheelchair access at 50 major monuments.</p>
+            <a href="news/new-facilities.html" class="read-more" aria-label="Read more about new facilities">Read more</a>
           </div>
         </article>
+      </div>
+      
+      <div class="section-footer">
+        <a href="news.html" class="btn outline">View All News</a>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="places-heading">
+    <!-- Popular Destinations Section -->
+    <section class="popular-destinations" aria-labelledby="destinations-heading">
       <div class="section-header">
-        <h2 id="places-heading">Must-Visit Places</h2>
-        <p class="section-description">Explore India's UNESCO World Heritage Sites and cultural landmarks</p>
+        <h2 id="destinations-heading">Must-Visit Destinations</h2>
+        <p class="section-description">Explore India's UNESCO World Heritage Sites</p>
       </div>
       
-      <div class="gallery">
-        <figure class="gallery-item" tabindex="0">
-          <img src="assets/taj-mahal.jpg" alt="Taj Mahal at sunrise showing reflection in water" loading="lazy" width="400" height="300">
-          <figcaption>
-            <h3>Taj Mahal</h3>
-            <p>Agra, Uttar Pradesh<br><em>UNESCO World Heritage Site</em></p>
-            <a href="places/taj-mahal.html" class="explore-btn" aria-label="Explore Taj Mahal">Explore</a>
-          </figcaption>
-        </figure>
+      <div class="destinations-grid">
+        <article class="destination-card" tabindex="0">
+          <figure>
+            <img src="assets/taj-mahal.jpg" alt="Taj Mahal at sunrise" loading="lazy" width="400" height="300">
+            <figcaption>
+              <h3>Taj Mahal</h3>
+              <p>Agra, Uttar Pradesh</p>
+              <div class="destination-meta">
+                <span class="rating">4.9 ★</span>
+                <span class="category">World Heritage Site</span>
+              </div>
+            </figcaption>
+          </figure>
+          <a href="places/taj-mahal.html" class="explore-btn" aria-label="Explore Taj Mahal">Explore</a>
+        </article>
         
-        <figure class="gallery-item" tabindex="0">
-          <img src="assets/agra-fort.jpg" alt="Agra Fort's massive red sandstone walls" loading="lazy" width="400" height="300">
-          <figcaption>
-            <h3>Agra Fort</h3>
-            <p>Agra, Uttar Pradesh<br><em>16th Century Mughal Fort</em></p>
-            <a href="places/agra-fort.html" class="explore-btn" aria-label="Explore Agra Fort">Explore</a>
-          </figcaption>
-        </figure>
+        <article class="destination-card" tabindex="0">
+          <figure>
+            <img src="assets/varanasi.jpg" alt="Varanasi ghats at dusk" loading="lazy" width="400" height="300">
+            <figcaption>
+              <h3>Varanasi</h3>
+              <p>Uttar Pradesh</p>
+              <div class="destination-meta">
+                <span class="rating">4.7 ★</span>
+                <span class="category">Spiritual Capital</span>
+              </div>
+            </figcaption>
+          </figure>
+          <a href="places/varanasi.html" class="explore-btn" aria-label="Explore Varanasi">Explore</a>
+        </article>
         
-        <figure class="gallery-item" tabindex="0">
-          <img src="assets/hawa-mahal.jpg" alt="Hawa Mahal's intricate honeycomb facade" loading="lazy" width="400" height="300">
-          <figcaption>
-            <h3>Hawa Mahal</h3>
-            <p>Jaipur, Rajasthan<br><em>Iconic Pink Sandstone Palace</em></p>
-            <a href="places/hawa-mahal.html" class="explore-btn" aria-label="Explore Hawa Mahal">Explore</a>
-          </figcaption>
-        </figure>
-        
-        <figure class="gallery-item" tabindex="0">
-          <img src="assets/varanasi.jpg" alt="Evening Ganga Aarti ceremony at Varanasi ghats" loading="lazy" width="400" height="300">
-          <figcaption>
-            <h3>Varanasi Ghats</h3>
-            <p>Varanasi, Uttar Pradesh<br><em>Spiritual Capital of India</em></p>
-            <a href="places/varanasi.html" class="explore-btn" aria-label="Explore Varanasi">Explore</a>
-          </figcaption>
-        </figure>
+        <article class="destination-card" tabindex="0">
+          <figure>
+            <img src="assets/jaipur.jpg" alt="Amber Fort in Jaipur" loading="lazy" width="400" height="300">
+            <figcaption>
+              <h3>Jaipur</h3>
+              <p>Rajasthan</p>
+              <div class="destination-meta">
+                <span class="rating">4.8 ★</span>
+                <span class="category">Pink City</span>
+              </div>
+            </figcaption>
+          </figure>
+          <a href="places/jaipur.html" class="explore-btn" aria-label="Explore Jaipur">Explore</a>
+        </article>
+      </div>
+      
+      <div class="section-footer">
+        <a href="places.html" class="btn outline">View All Destinations</a>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2 id="newsletter-heading">Stay Updated</h2>
+          <p>Subscribe to our newsletter for the latest travel guides and offers</p>
+        </div>
+        <form class="newsletter-form" aria-label="Newsletter subscription form">
+          <div class="form-group">
+            <label for="email" class="visually-hidden">Email Address</label>
+            <input type="email" id="email" placeholder="Your email address" required>
+            <button type="submit" class="btn primary">Subscribe</button>
+          </div>
+          <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Connect With Us</h3>
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <img src="assets/facebook-icon.svg" alt="Facebook" width="24" height="24">
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <img src="assets/twitter-icon.svg" alt="Twitter" width="24" height="24">
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="assets/instagram-icon.svg" alt="Instagram" width="24" height="24">
-          </a>
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="assets/logo-white.svg" alt="Indian Tourism Logo" width="120" height="60">
+          <p>Promoting India's rich cultural heritage and tourism destinations since 2023.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Info</h3>
+          <address>
+            <p>123 Tourism Plaza, New Delhi</p>
+            <p>India 110001</p>
+            <p><a href="mailto:info@indiantourism.example">info@indiantourism.example</a></p>
+            <p><a href="tel:+9118001234567">+91 1800 123 4567</a></p>
+          </address>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="assets/facebook-icon.svg" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <img src="assets/twitter-icon.svg" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="assets/instagram-icon.svg" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <img src="assets/youtube-icon.svg" alt="YouTube" width="24" height="24">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="copyright">
-      <p>&copy; <span id="current-year">2025</span> Indian Tourism. All rights reserved.</p>
-      <p>Designed with ❤️ for Incredible India</p>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2023</span> Indian Tourism. All rights reserved.</p>
+        <p>Designed with ❤️ for Incredible India</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Update copyright year automatically
+    // Update copyright year
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Lazy loading for images
-    if ('loading' in HTMLImageElement.prototype) {
-      const images = document.querySelectorAll('img[loading="lazy"]');
-      images.forEach(img => {
-        img.src = img.dataset.src;
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    if(menuBtn && nav) {
+      menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuBtn.classList.toggle('active');
       });
     }
+    
+    // Lazy loading for images
+    document.addEventListener('DOMContentLoaded', function() {
+      const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+      
+      if('IntersectionObserver' in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if(entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          });
+        });
+        
+        lazyImages.forEach(function(lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+        });
+      }
+    });
   </script>
 </body>
 </html>
