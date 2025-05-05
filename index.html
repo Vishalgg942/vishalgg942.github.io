@@ -3,72 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Latest news and famous tourist places in India">
-  <title>Indian Tourism News & Famous Places</title>
+  <meta name="description" content="Discover latest Indian tourism news and explore famous heritage sites, cultural destinations and must-visit places across India">
+  <meta name="keywords" content="India tourism, Taj Mahal, travel news, heritage sites, famous places in India">
+  <title>Indian Tourism | Latest News & Famous Places to Visit</title>
+  <link rel="canonical" href="https://vishalgg942.github.io">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" as="style">
+  <link rel="preload" href="style.css" as="style">
+  
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  
+  <!-- Google Search Console verification (optional) -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+  
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Indian Tourism",
+      "url": "https://vishalgg942.github.io",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://vishalgg942.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  
+  <!-- Google Custom Search -->
   <script async src="https://cse.google.com/cse.js?cx=365511acb7af043ce"></script>
 </head>
+
 <body>
-  <nav>
+  <!-- Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <nav aria-label="Main navigation">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Famous Places</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="places.html">Famous Places</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <header class="hero">
-    <h1>Indian Tourism - Explore News & Famous Places</h1>
-    <p>Stay updated with tourism news and must-visit destinations across India</p>
-
-    <div class="search-bar">
-      <div class="gcse-search"></div>
+  <header class="hero" role="banner">
+    <div class="hero-content">
+      <h1>Discover the Wonders of Indian Tourism</h1>
+      <p class="subtitle">Explore heritage sites, cultural destinations and latest travel updates across India</p>
+      
+      <div class="search-bar" role="search">
+        <div class="gcse-search" data-enableHistory="true" data-queryParameterName="q"></div>
+      </div>
     </div>
   </header>
 
-  <section class="section">
-    <h2>Latest News</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Tourism Boom in India</h3>
-        <p>India sees a record number of tourists this year, with historical sites being the top attractions.</p>
+  <main id="main-content">
+    <section class="section" aria-labelledby="news-heading">
+      <div class="section-header">
+        <h2 id="news-heading">Latest Tourism News</h2>
+        <p class="section-description">Stay updated with recent developments in Indian tourism sector</p>
       </div>
-      <div class="card">
-        <h3>New Facilities at Monuments</h3>
-        <p>Government announces new amenities and guides at major tourist spots for a better experience.</p>
+      
+      <div class="card-container">
+        <article class="card" tabindex="0">
+          <div class="card-content">
+            <h3>Tourism Boom in India</h3>
+            <p>India welcomed over 10 million foreign tourists in 2023, with historical sites being the top attractions. The Taj Mahal alone saw 7 million visitors.</p>
+            <a href="news/tourism-boom.html" class="read-more" aria-label="Read more about Tourism Boom">Read more →</a>
+          </div>
+        </article>
+        
+        <article class="card" tabindex="0">
+          <div class="card-content">
+            <h3>New Facilities at Monuments</h3>
+            <p>ASI announces multilingual audio guides, wheelchair access and night viewing at 50 major heritage sites across India.</p>
+            <a href="news/new-facilities.html" class="read-more" aria-label="Read more about New Facilities">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="places-heading">
+      <div class="section-header">
+        <h2 id="places-heading">Must-Visit Places</h2>
+        <p class="section-description">Explore India's UNESCO World Heritage Sites and cultural landmarks</p>
+      </div>
+      
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0">
+          <img src="assets/taj-mahal.jpg" alt="Taj Mahal at sunrise showing reflection in water" loading="lazy" width="400" height="300">
+          <figcaption>
+            <h3>Taj Mahal</h3>
+            <p>Agra, Uttar Pradesh<br><em>UNESCO World Heritage Site</em></p>
+            <a href="places/taj-mahal.html" class="explore-btn" aria-label="Explore Taj Mahal">Explore</a>
+          </figcaption>
+        </figure>
+        
+        <figure class="gallery-item" tabindex="0">
+          <img src="assets/agra-fort.jpg" alt="Agra Fort's massive red sandstone walls" loading="lazy" width="400" height="300">
+          <figcaption>
+            <h3>Agra Fort</h3>
+            <p>Agra, Uttar Pradesh<br><em>16th Century Mughal Fort</em></p>
+            <a href="places/agra-fort.html" class="explore-btn" aria-label="Explore Agra Fort">Explore</a>
+          </figcaption>
+        </figure>
+        
+        <figure class="gallery-item" tabindex="0">
+          <img src="assets/hawa-mahal.jpg" alt="Hawa Mahal's intricate honeycomb facade" loading="lazy" width="400" height="300">
+          <figcaption>
+            <h3>Hawa Mahal</h3>
+            <p>Jaipur, Rajasthan<br><em>Iconic Pink Sandstone Palace</em></p>
+            <a href="places/hawa-mahal.html" class="explore-btn" aria-label="Explore Hawa Mahal">Explore</a>
+          </figcaption>
+        </figure>
+        
+        <figure class="gallery-item" tabindex="0">
+          <img src="assets/varanasi.jpg" alt="Evening Ganga Aarti ceremony at Varanasi ghats" loading="lazy" width="400" height="300">
+          <figcaption>
+            <h3>Varanasi Ghats</h3>
+            <p>Varanasi, Uttar Pradesh<br><em>Spiritual Capital of India</em></p>
+            <a href="places/varanasi.html" class="explore-btn" aria-label="Explore Varanasi">Explore</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="assets/facebook-icon.svg" alt="Facebook" width="24" height="24">
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <img src="assets/twitter-icon.svg" alt="Twitter" width="24" height="24">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="assets/instagram-icon.svg" alt="Instagram" width="24" height="24">
+          </a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Famous Places</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal - Wonder of the World" loading="lazy">
-        <p><strong>Taj Mahal</strong> (Agra, Uttar Pradesh)<br>One of the Seven Wonders of the World.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Agra_Fort.jpg" alt="Agra Fort - Heritage" loading="lazy">
-        <p><strong>Agra Fort</strong> (Agra, Uttar Pradesh)<br>A UNESCO World Heritage Site.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Hawa_Mahal_2011.jpg" alt="Hawa Mahal Jaipur" loading="lazy">
-        <p><strong>Hawa Mahal</strong> (Jaipur, Rajasthan)<br>The Palace of Winds, iconic pink monument.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Varanasi_Ghat.jpg" alt="Varanasi Ghats on Ganges" loading="lazy">
-        <p><strong>Varanasi Ghats</strong> (Varanasi, Uttar Pradesh)<br>Spiritual heart of India on the Ganges.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Indian Tourism News | All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    
+    <div class="copyright">
+      <p>&copy; <span id="current-year">2025</span> Indian Tourism. All rights reserved.</p>
+      <p>Designed with ❤️ for Incredible India</p>
     </div>
   </footer>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Lazy loading for images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    }
+  </script>
 </body>
 </html>
