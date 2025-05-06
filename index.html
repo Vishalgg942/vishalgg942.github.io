@@ -47,107 +47,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Custom Search Engine (CSE) -->
-  <meta name="google" content="notranslate">
-  <script async src="https://cse.google.com/cse.js?cx=YOUR_GOOGLE_CSE_ID"></script>
-  <!-- Replace YOUR_GOOGLE_CSE_ID with your actual CSE ID -->
+  <script async src="https://cse.google.com/cse.js?cx=a08325a0d8fc84b56"></script>
+  <!-- a08325a0d8fc84b56 = Your CSE ID -->
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  <!-- Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-
-  <!-- JSON-LD Structured Data: TouristAttraction, Breadcrumb, Website, Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Taj Mahal",
-    "description": "Iconic ivory-white marble mausoleum in Agra, India, built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal.",
-    "image": "https://www.incredibleindia.org/assets/tajmahal-hero-1200.webp",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Agra",
-      "addressRegion": "Uttar Pradesh",
-      "postalCode": "282001",
-      "addressCountry": "IN"
-    },
-    "priceRange": "₹50 - ₹1300",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-      ],
-      "opens": "06:00",
-      "closes": "19:00"
-    },
-    "isAccessibleForFree": false,
-    "url": "https://www.incredibleindia.org/taj-mahal-tours"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Incredible India",
-    "url": "https://www.incredibleindia.org",
-    "logo": "https://www.incredibleindia.org/assets/logo.svg",
-    "sameAs": [
-      "https://www.facebook.com/incredibleindia",
-      "https://twitter.com/incredibleindia",
-      "https://www.instagram.com/incredibleindia"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.incredibleindia.org/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Taj Mahal Tours",
-        "item": "https://www.incredibleindia.org/taj-mahal-tours"
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.incredibleindia.org/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.incredibleindia.org/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- Sitemap & robots.txt (for reference, not HTML) -->
-  <!-- <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"> -->
-  <!-- <meta name="robots" content="index, follow"> -->
-
-  <!-- Service Worker Registration for PWA -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
-  </script>
+  <!-- (Optional) Google Analytics, Structured Data, etc. -->
 </head>
 <body>
   <!-- Skip to Content Link -->
@@ -178,9 +81,8 @@
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
     </div>
-    <!-- Search Bar -->
+    <!-- Search Bar with Google CSE -->
     <div id="search-bar" class="search-bar" aria-hidden="true">
-      <!-- Google Custom Search Element -->
       <div class="gcse-search"></div>
     </div>
   </header>
@@ -206,7 +108,7 @@
     <!-- ...rest of your page content... -->
   </main>
 
-  <!-- Footer (Add social links, newsletter, etc. as per your design) -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-logo">
@@ -249,5 +151,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- (Optional) JS for toggling search bar on mobile, etc. -->
+  <script>
+    // Example: Toggle search bar visibility
+    const searchToggle = document.getElementById('search-toggle');
+    const searchBar = document.getElementById('search-bar');
+    if (searchToggle && searchBar) {
+      searchToggle.addEventListener('click', function() {
+        const expanded = searchToggle.getAttribute('aria-expanded') === 'true';
+        searchToggle.setAttribute('aria-expanded', !expanded);
+        searchBar.setAttribute('aria-hidden', expanded);
+      });
+    }
+  </script>
 </body>
 </html>
