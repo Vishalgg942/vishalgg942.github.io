@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Discover India's rich cultural heritage and must-visit tourist destinations. Latest tourism news and travel guides for famous places like Taj Mahal, Varanasi, and more.">
   <meta name="keywords" content="India tourism, Taj Mahal, travel guide, heritage sites, famous places in India">
+  <meta name="color-scheme" content="light dark">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Indian Tourism | Explore Incredible India">
+  <meta property="og:description" content="Discover India's rich cultural heritage and must-visit tourist destinations.">
+  <meta property="og:image" content="https://vishalgg942.github.io/assets/hero-image.jpg">
+  <meta property="og:url" content="https://vishalgg942.github.io">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Indian Tourism | Explore Incredible India">
+  <meta name="twitter:description" content="Discover India's rich cultural heritage and must-visit tourist destinations.">
+  <meta name="twitter:image" content="https://vishalgg942.github.io/assets/hero-image.jpg">
+  
   <title>Indian Tourism | Explore Incredible India</title>
   <link rel="canonical" href="https://vishalgg942.github.io">
   
@@ -12,13 +28,16 @@
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" as="style">
   <link rel="preload" href="style.css" as="style">
   <link rel="preload" href="assets/logo.svg" as="image">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Favicon -->
+  <!-- Favicon and App Icons -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   
   <!-- Structured data for SEO -->
   <script type="application/ld+json">
@@ -31,6 +50,11 @@
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "India"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://vishalgg942.github.io/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
   </script>
@@ -40,11 +64,17 @@
   <!-- Skip to content link for accessibility -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
   
+  <!-- Google Search Box -->
+  <div class="search-container">
+    <script async src="https://cse.google.com/cse.js?cx=f267c5d30f3e6497d"></script>
+    <div class="gcse-search"></div>
+  </div>
+  
   <!-- Header with logo and navigation -->
   <header class="site-header" role="banner">
     <div class="header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/logo.svg" alt="Indian Tourism Logo" width="120" height="60">
+        <img src="assets/logo.svg" alt="Indian Tourism Logo" width="120" height="60" loading="eager">
       </a>
       
       <nav aria-label="Main navigation">
@@ -53,6 +83,7 @@
           <li><a href="news.html">News</a></li>
           <li><a href="places.html">Destinations</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><button id="chatbot-toggle" class="chatbot-btn">Chat with Us</button></li>
         </ul>
       </nav>
       
@@ -61,6 +92,23 @@
       </button>
     </div>
   </header>
+
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-widget" class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>Tourism Assistant</h3>
+      <button id="chatbot-close" class="chatbot-close-btn">×</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="chatbot-message bot-message">
+        <p>Hello! I'm your India travel assistant. How can I help you today?</p>
+      </div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatbot-input" placeholder="Ask about destinations, visas, etc...">
+      <button id="chatbot-send">Send</button>
+    </div>
+  </div>
 
   <!-- Hero Banner -->
   <section class="hero" role="region" aria-labelledby="hero-heading">
@@ -75,7 +123,7 @@
     </div>
     
     <div class="hero-image">
-      <img src="assets/hero-image.jpg" alt="Panoramic view of Indian landscape" loading="eager" width="1600" height="900">
+      <img src="assets/hero-image.jpg" alt="Panoramic view of Indian landscape" loading="eager" width="1600" height="900" decoding="async">
     </div>
   </section>
 
@@ -91,7 +139,7 @@
       <div class="news-grid">
         <article class="news-card" tabindex="0">
           <div class="news-image">
-            <img src="assets/news1.jpg" alt="Tourists visiting Taj Mahal" loading="lazy" width="400" height="300">
+            <img src="assets/news1.jpg" alt="Tourists visiting Taj Mahal" loading="lazy" width="400" height="300" decoding="async">
           </div>
           <div class="news-content">
             <span class="news-category">Visitor Statistics</span>
@@ -103,7 +151,7 @@
         
         <article class="news-card" tabindex="0">
           <div class="news-image">
-            <img src="assets/news2.jpg" alt="New facilities at historical site" loading="lazy" width="400" height="300">
+            <img src="assets/news2.jpg" alt="New facilities at historical site" loading="lazy" width="400" height="300" decoding="async">
           </div>
           <div class="news-content">
             <span class="news-category">Facility Upgrade</span>
@@ -129,7 +177,7 @@
       <div class="destinations-grid">
         <article class="destination-card" tabindex="0">
           <figure>
-            <img src="assets/taj-mahal.jpg" alt="Taj Mahal at sunrise" loading="lazy" width="400" height="300">
+            <img src="assets/taj-mahal.jpg" alt="Taj Mahal at sunrise" loading="lazy" width="400" height="300" decoding="async">
             <figcaption>
               <h3>Taj Mahal</h3>
               <p>Agra, Uttar Pradesh</p>
@@ -144,7 +192,7 @@
         
         <article class="destination-card" tabindex="0">
           <figure>
-            <img src="assets/varanasi.jpg" alt="Varanasi ghats at dusk" loading="lazy" width="400" height="300">
+            <img src="assets/varanasi.jpg" alt="Varanasi ghats at dusk" loading="lazy" width="400" height="300" decoding="async">
             <figcaption>
               <h3>Varanasi</h3>
               <p>Uttar Pradesh</p>
@@ -159,7 +207,7 @@
         
         <article class="destination-card" tabindex="0">
           <figure>
-            <img src="assets/jaipur.jpg" alt="Amber Fort in Jaipur" loading="lazy" width="400" height="300">
+            <img src="assets/jaipur.jpg" alt="Amber Fort in Jaipur" loading="lazy" width="400" height="300" decoding="async">
             <figcaption>
               <h3>Jaipur</h3>
               <p>Rajasthan</p>
@@ -185,7 +233,7 @@
           <h2 id="newsletter-heading">Stay Updated</h2>
           <p>Subscribe to our newsletter for the latest travel guides and offers</p>
         </div>
-        <form class="newsletter-form" aria-label="Newsletter subscription form">
+        <form class="newsletter-form" aria-label="Newsletter subscription form" role="form">
           <div class="form-group">
             <label for="email" class="visually-hidden">Email Address</label>
             <input type="email" id="email" placeholder="Your email address" required>
@@ -202,7 +250,7 @@
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-about">
-          <img src="assets/logo-white.svg" alt="Indian Tourism Logo" width="120" height="60">
+          <img src="assets/logo-white.svg" alt="Indian Tourism Logo" width="120" height="60" loading="lazy">
           <p>Promoting India's rich cultural heritage and tourism destinations since 2023.</p>
         </div>
         
@@ -216,13 +264,15 @@
           </ul>
         </div>
         
-        <div class="footer-contact">
+        <div class="footer-contact" itemscope itemtype="https://schema.org/Organization">
           <h3>Contact Info</h3>
-          <address>
-            <p>123 Tourism Plaza, New Delhi</p>
-            <p>India 110001</p>
-            <p><a href="mailto:info@indiantourism.example">info@indiantourism.example</a></p>
-            <p><a href="tel:+9118001234567">+91 1800 123 4567</a></p>
+          <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">123 Tourism Plaza</span>,
+            <span itemprop="addressLocality">New Delhi</span>,
+            <span itemprop="postalCode">110001</span>,
+            <span itemprop="addressCountry">India</span><br>
+            <a href="mailto:info@indiantourism.example" itemprop="email">info@indiantourism.example</a><br>
+            <a href="tel:+9118001234567" itemprop="telephone">+91 1800 123 4567</a>
           </address>
         </div>
         
@@ -230,16 +280,16 @@
           <h3>Follow Us</h3>
           <div class="social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src="assets/facebook-icon.svg" alt="Facebook" width="24" height="24">
+              <img src="assets/facebook-icon.svg" alt="Facebook" width="24" height="24" loading="lazy">
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <img src="assets/twitter-icon.svg" alt="Twitter" width="24" height="24">
+              <img src="assets/twitter-icon.svg" alt="Twitter" width="24" height="24" loading="lazy">
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="assets/instagram-icon.svg" alt="Instagram" width="24" height="24">
+              <img src="assets/instagram-icon.svg" alt="Instagram" width="24" height="24" loading="lazy">
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <img src="assets/youtube-icon.svg" alt="YouTube" width="24" height="24">
+              <img src="assets/youtube-icon.svg" alt="YouTube" width="24" height="24" loading="lazy">
             </a>
           </div>
         </div>
@@ -268,16 +318,84 @@
       });
     }
     
+    // Chatbot functionality
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotWidget = document.getElementById('chatbot-widget');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    
+    if(chatbotToggle && chatbotWidget) {
+      chatbotToggle.addEventListener('click', () => {
+        chatbotWidget.classList.toggle('active');
+      });
+      
+      chatbotClose.addEventListener('click', () => {
+        chatbotWidget.classList.remove('active');
+      });
+      
+      // Simple chatbot responses
+      const chatbotResponses = {
+        "hello": "Hello! How can I help you with your India travel plans?",
+        "destinations": "Top destinations: Taj Mahal (Agra), Varanasi, Jaipur, Goa, Kerala. Need details on any?",
+        "visa": "Most visitors need a visa. Check https://indianvisaonline.gov.in for e-Visa options.",
+        "weather": "India has diverse climates. North: cold winters (Dec-Feb), South: tropical. Best time to visit varies by region.",
+        "food": "Must-try foods: Butter Chicken (North), Dosa (South), Vada Pav (West), Momos (East). Want specific recommendations?",
+        "thank you": "You're welcome! Happy to help with any other questions about traveling in India."
+      };
+      
+      function addChatMessage(message, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('chatbot-message');
+        messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+        messageDiv.innerHTML = `<p>${message}</p>`;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+      
+      chatbotSend.addEventListener('click', () => {
+        const userMessage = chatbotInput.value.trim();
+        if(userMessage) {
+          addChatMessage(userMessage, true);
+          chatbotInput.value = '';
+          
+          // Simple response logic
+          const lowerMessage = userMessage.toLowerCase();
+          let response = "I can help with information about destinations, visas, weather, food, and more. Could you clarify your question?";
+          
+          for(const [key, value] of Object.entries(chatbotResponses)) {
+            if(lowerMessage.includes(key)) {
+              response = value;
+              break;
+            }
+          }
+          
+          // Simulate typing delay
+          setTimeout(() => {
+            addChatMessage(response);
+          }, 800);
+        }
+      });
+      
+      // Allow Enter key to send message
+      chatbotInput.addEventListener('keypress', (e) => {
+        if(e.key === 'Enter') {
+          chatbotSend.click();
+        }
+      });
+    }
+    
     // Lazy loading for images
     document.addEventListener('DOMContentLoaded', function() {
-      const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
-      
       if('IntersectionObserver' in window) {
-        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+        
+        let lazyImageObserver = new IntersectionObserver(function(entries) {
           entries.forEach(function(entry) {
             if(entry.isIntersecting) {
               let lazyImage = entry.target;
-              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.src = lazyImage.dataset.src || lazyImage.src;
               lazyImageObserver.unobserve(lazyImage);
             }
           });
@@ -289,7 +407,5 @@
       }
     });
   </script>
-</body><script async src="https://cse.google.com/cse.js?cx=f267c5d30f3e6497d">
-</script>
-<div class="gcse-search"></div>
+</body>
 </html>
