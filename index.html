@@ -3,67 +3,283 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover Incredible India | Official Tourism Website</title>
-  <meta name="description" content="Explore Taj Mahal, India's rich heritage, diverse cultures and breathtaking landscapes.">
+  <title>Taj Mahal Tours | Official UNESCO World Heritage Site Experience | Incredible India</title>
+  <meta name="description" content="Book premium Taj Mahal tours including sunrise visits, moonlight viewing, and expert-guided heritage walks. Official tourism website with best prices and authentic experiences.">
+  <meta name="keywords" content="Taj Mahal tour, Agra travel, India tourism, UNESCO World Heritage, Mughal architecture">
+  
   <!-- Preload Critical Resources -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
-  <link rel="preload" href="assets/hero-image.webp" as="image">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/tajmahal-hero-800.webp" as="image" imagesrcset="assets/tajmahal-hero-800.webp 800w, assets/tajmahal-hero-1200.webp 1200w, assets/tajmahal-hero-1920.webp 1920w" imagesizes="100vw">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.incredibleindia.org/taj-mahal-tours">
+  
+  <!-- Favicon -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.min.css">
+  
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome with integrity check -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Taj Mahal",
+    "description": "Iconic ivory-white marble mausoleum in Agra, India, built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Agra",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "282001",
+      "addressCountry": "IN"
+    },
+    "image": "https://www.incredibleindia.org/assets/tajmahal-hero-1200.webp",
+    "priceRange": "₹50 - ₹1300",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "06:00",
+      "closes": "19:00"
+    },
+    "isAccessibleForFree": false
+  }
+  </script>
+  
   <style>
     /* Critical CSS (Above the fold) */
     :root {
       --primary: #FF9933;
+      --primary-dark: #e68a2e;
       --secondary: #138808;
       --accent: #FFD700;
       --dark: #1a1a1a;
       --light: #f9f9f9;
+      --text-light: #ffffff;
+      --shadow: 0 4px 6px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+      --radius: 8px;
     }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       overflow-x: hidden;
       color: var(--dark);
+      line-height: 1.6;
+      background-color: var(--light);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
+    
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      z-index: 100;
+      transition: var(--transition);
+      font-weight: 600;
+      border-radius: 0 0 4px 0;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                  url('assets/tajmahal-hero.webp') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('assets/tajmahal-hero-800.webp') center/cover no-repeat;
       height: 100vh;
+      min-height: 600px;
+      max-height: 1200px;
       display: flex;
       align-items: center;
       padding: 0 5%;
-      color: white;
+      color: var(--text-light);
       position: relative;
+      isolation: isolate;
     }
+    
+    @media (min-width: 768px) {
+      .hero {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                         url('assets/tajmahal-hero-1200.webp');
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      .hero {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                         url('assets/tajmahal-hero-1920.webp');
+      }
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+      z-index: 1;
+    }
+    
     .hero-content {
       max-width: 600px;
       z-index: 2;
+      animation: fadeInUp 1s ease-out;
     }
+    
     .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      line-height: 1.2;
+      font-weight: 700;
     }
+    
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-bottom: 2.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      max-width: 90%;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 12px 30px;
       border-radius: 50px;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: var(--transition);
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      min-width: 160px;
     }
+    
     .btn-primary {
       background: var(--primary);
       color: white;
     }
-    .btn-primary:hover {
-      background: var(--accent);
+    
+    .btn-primary:hover, 
+    .btn-primary:focus {
+      background: var(--primary-dark);
       transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: var(--shadow);
+      outline: none;
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid var(--text-light);
+    }
+    
+    .btn-outline:hover, 
+    .btn-outline:focus {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-3px);
+      outline: 2px solid var(--accent);
+    }
+    
+    .scroll-down {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-light);
+      text-align: center;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .scroll-down span {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    
+    .scroll-down i {
+      font-size: 1.2rem;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+    
+    /* Visually hidden helper class */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
@@ -71,47 +287,50 @@
   <!-- Skip to Content Link -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Header with Gradient Background -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/logo.svg" alt="Incredible India Logo" width="150" height="70" loading="eager">
+        <img src="assets/logo.svg" alt="Incredible India - Ministry of Tourism" width="150" height="70" loading="eager">
       </a>
       
       <nav aria-label="Main navigation">
-        <ul id="main-menu">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="taj-mahal-tours.html" class="active">Taj Mahal Tours</a></li>
-          <li><a href="experiences.html">Experiences</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul id="main-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+          <li role="none"><a href="destinations.html" role="menuitem">Destinations</a></li>
+          <li role="none"><a href="taj-mahal-tours.html" role="menuitem" class="active">Taj Mahal Tours</a></li>
+          <li role="none"><a href="experiences.html" role="menuitem">Experiences</a></li>
+          <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
         </ul>
       </nav>
       
       <div class="header-cta">
-        <button id="search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button id="search-toggle" aria-label="Search" aria-expanded="false" aria-controls="search-bar">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
         <a href="book-now.html" class="btn btn-small">Book Now</a>
       </div>
       
       <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
-        <span class="menu-icon"></span>
+        <span class="menu-icon" aria-hidden="true"></span>
       </button>
     </div>
     
     <!-- Search Bar -->
-    <div class="search-bar">
-      <form role="search">
-        <input type="search" placeholder="Search destinations..." aria-label="Search destinations">
-        <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+    <div id="search-bar" class="search-bar" aria-hidden="true">
+      <form role="search" method="get" action="/search">
+        <label for="search-input" class="visually-hidden">Search destinations</label>
+        <input type="search" id="search-input" placeholder="Search destinations..." aria-label="Search destinations" autocomplete="off">
+        <button type="submit" aria-label="Submit search"><i class="fas fa-search" aria-hidden="true"></i></button>
       </form>
     </div>
   </header>
 
-  <!-- Hero Section with Taj Mahal Focus -->
+  <!-- Hero Section -->
   <section class="hero" role="region" aria-labelledby="hero-heading">
     <div class="hero-content">
       <h1 id="hero-heading">Experience the Majesty of Taj Mahal</h1>
-      <p class="subtitle">A timeless symbol of love and one of the Seven Wonders of the World</p>
+      <p class="subtitle">A timeless symbol of love and one of the New Seven Wonders of the World</p>
       
       <div class="cta-buttons">
         <a href="taj-mahal-tours.html" class="btn btn-primary">Explore Tours</a>
@@ -120,10 +339,10 @@
     </div>
     
     <!-- Scroll Down Indicator -->
-    <div class="scroll-down">
+    <a href="#main-content" class="scroll-down" aria-label="Scroll to main content">
       <span>Explore More</span>
-      <i class="fas fa-chevron-down"></i>
-    </div>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </a>
   </section>
 
   <!-- Main Content -->
@@ -133,7 +352,7 @@
       <div class="container">
         <div class="taj-content">
           <h2 id="taj-heading">The Crown Jewel of India</h2>
-          <p>The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.</p>
+          <p>The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal. The Taj Mahal attracts 7-8 million visitors annually and was designated as a UNESCO World Heritage Site in 1983.</p>
           
           <div class="taj-stats">
             <div class="stat-item">
@@ -154,13 +373,43 @@
         </div>
         
         <div class="taj-gallery">
-          <div class="main-image">
-            <img src="assets/taj-mahal-sunrise.webp" alt="Taj Mahal at sunrise" loading="lazy" width="600" height="400">
-          </div>
+          <figure class="main-image">
+            <img src="assets/taj-mahal-sunrise.webp" 
+                 alt="Taj Mahal at sunrise with reflection in the water" 
+                 loading="lazy" 
+                 width="600" 
+                 height="400"
+                 srcset="assets/taj-mahal-sunrise-400.webp 400w,
+                         assets/taj-mahal-sunrise-600.webp 600w,
+                         assets/taj-mahal-sunrise-800.webp 800w"
+                 sizes="(max-width: 768px) 90vw, 50vw">
+            <figcaption class="visually-hidden">Taj Mahal at sunrise showing perfect reflection in the water</figcaption>
+          </figure>
           <div class="thumbnail-grid">
-            <img src="assets/taj-mahal-closeup.webp" alt="Taj Mahal closeup" loading="lazy" width="150" height="100">
-            <img src="assets/taj-mahal-garden.webp" alt="Taj Mahal gardens" loading="lazy" width="150" height="100">
-            <img src="assets/taj-mahal-moonlight.webp" alt="Taj Mahal at moonlight" loading="lazy" width="150" height="100">
+            <figure>
+              <img src="assets/taj-mahal-closeup.webp" 
+                   alt="Closeup view of Taj Mahal's intricate marble carvings and pietra dura inlay work" 
+                   loading="lazy" 
+                   width="150" 
+                   height="100">
+              <figcaption class="visually-hidden">Detailed marble craftsmanship of the Taj Mahal</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/taj-mahal-garden.webp" 
+                   alt="Symmetrical Mughal gardens in front of Taj Mahal with fountains" 
+                   loading="lazy" 
+                   width="150" 
+                   height="100">
+              <figcaption class="visually-hidden">Charbagh garden layout in front of the Taj</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/taj-mahal-moonlight.webp" 
+                   alt="Taj Mahal illuminated under moonlight during night viewing" 
+                   loading="lazy" 
+                   width="150" 
+                   height="100">
+              <figcaption class="visually-hidden">Taj Mahal during full moon night viewing</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -169,21 +418,58 @@
     <!-- Virtual Tour Section -->
     <section id="virtual-tour" class="virtual-tour" aria-labelledby="virtual-tour-heading">
       <div class="container">
-        <h2 id="virtual-tour-heading">Taj Mahal Virtual Experience</h2>
-        <p>Explore the Taj Mahal from anywhere in the world with our immersive 360° virtual tour.</p>
+        <header class="section-header">
+          <h2 id="virtual-tour-heading">Taj Mahal Virtual Experience</h2>
+          <p class="section-subtitle">Explore the Taj Mahal from anywhere in the world with our immersive 360° virtual tour</p>
+        </header>
         
         <div class="tour-container">
           <div class="tour-viewer">
-            <!-- 360° Tour Embed -->
-            <iframe src="https://www.google.com/maps/embed?pb=!4v1681234567890!6m8!1m7!1sCAoSLEFGMVFpcE5fV1J0WlVjV0hxY0hqWU5zVHZJZ2R6VzRrVk1JX2FfVUY0!2m2!1d27.1751448!2d78.0421422!3f345.15!4f0!5f0.7820865974627469" 
-                    allowfullscreen="" loading="lazy" title="Taj Mahal 360° Virtual Tour"></iframe>
+            <div class="tour-embed">
+              <iframe src="https://www.google.com/maps/embed?pb=!4v1681234567890!6m8!1m7!1sCAoSLEFGMVFpcE5fV1J0WlVjV0hxY0hqWU5zVHZJZ2R6VzRrVk1JX2FfVUY0!2m2!1d27.1751448!2d78.0421422!3f345.15!4f0!5f0.7820865974627469" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      title="Taj Mahal 360° Virtual Tour" 
+                      aria-label="Interactive 360 degree virtual tour of Taj Mahal"></iframe>
+            </div>
           </div>
           
-          <div class="tour-controls">
-            <button class="tour-btn active" data-view="exterior"><i class="fas fa-monument"></i> Exterior</button>
-            <button class="tour-btn" data-view="interior"><i class="fas fa-archway"></i> Interior</button>
-            <button class="tour-btn" data-view="garden"><i class="fas fa-tree"></i> Gardens</button>
-            <button class="tour-btn" data-view="river"><i class="fas fa-water"></i> River View</button>
+          <div class="tour-controls" role="tablist" aria-label="Tour view options">
+            <button class="tour-btn active" 
+                    data-view="exterior" 
+                    role="tab" 
+                    aria-selected="true" 
+                    aria-controls="exterior-view"
+                    id="tab-exterior">
+              <i class="fas fa-monument" aria-hidden="true"></i> Exterior
+            </button>
+            <button class="tour-btn" 
+                    data-view="interior" 
+                    role="tab" 
+                    aria-selected="false" 
+                    aria-controls="interior-view" 
+                    tabindex="-1"
+                    id="tab-interior">
+              <i class="fas fa-archway" aria-hidden="true"></i> Interior
+            </button>
+            <button class="tour-btn" 
+                    data-view="garden" 
+                    role="tab" 
+                    aria-selected="false" 
+                    aria-controls="garden-view" 
+                    tabindex="-1"
+                    id="tab-garden">
+              <i class="fas fa-tree" aria-hidden="true"></i> Gardens
+            </button>
+            <button class="tour-btn" 
+                    data-view="river" 
+                    role="tab" 
+                    aria-selected="false" 
+                    aria-controls="river-view" 
+                    tabindex="-1"
+                    id="tab-river">
+              <i class="fas fa-water" aria-hidden="true"></i> River View
+            </button>
           </div>
         </div>
       </div>
@@ -192,16 +478,271 @@
     <!-- Recommended Tours -->
     <section class="tours-section" aria-labelledby="tours-heading">
       <div class="container">
-        <h2 id="tours-heading">Taj Mahal Tour Packages</h2>
-        <p class="section-subtitle">Curated experiences for every traveler</p>
+        <header class="section-header">
+          <h2 id="tours-heading">Taj Mahal Tour Packages</h2>
+          <p class="section-subtitle">Curated experiences for every traveler</p>
+        </header>
         
         <div class="tours-grid">
-          <div class="tour-card">
-            <div class="tour-badge">Bestseller</div>
-            <img src="assets/sunrise-tour.webp" alt="Sunrise at Taj Mahal" loading="lazy" width="400" height="250">
+          <article class="tour-card" itemscope itemtype="https://schema.org/TouristTrip">
+            <div class="tour-badge" aria-hidden="true">Bestseller</div>
+            <figure>
+              <img src="assets/sunrise-tour.webp" 
+                   alt="Sunrise view of Taj Mahal with few visitors" 
+                   loading="lazy" 
+                   width="400" 
+                   height="250"
+                   itemprop="image">
+            </figure>
             <div class="tour-content">
-              <h3>Sunrise Special Tour</h3>
-              <p class="tour-desc">Witness the magical moment when the first rays of sun illuminate the marble.</p>
+              <h3 itemprop="name">Sunrise Special Tour</h3>
+              <p class="tour-desc" itemprop="description">Witness the magical moment when the first rays of sun illuminate the marble facade of the Taj Mahal, with fewer crowds and perfect photo opportunities.</p>
               <div class="tour-meta">
-                <span class="duration"><i class="fas fa-clock"></i> 5 hours</span>
-                <span class
+                <span class="duration" itemprop="duration"><i class="fas fa-clock" aria-hidden="true"></i> 5 hours</span>
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">From <span itemprop="price">₹2,500</span></span>
+              </div>
+              <a href="sunrise-tour.html" class="btn btn-primary" aria-label="Book Sunrise Special Tour" itemprop="url">Book Now</a>
+            </div>
+          </article>
+          
+          <article class="tour-card" itemscope itemtype="https://schema.org/TouristTrip">
+            <div class="tour-badge" aria-hidden="true">New</div>
+            <figure>
+              <img src="assets/moonlight-tour.webp" 
+                   alt="Taj Mahal during full moon night" 
+                   loading="lazy" 
+                   width="400" 
+                   height="250"
+                   itemprop="image">
+            </figure>
+            <div class="tour-content">
+              <h3 itemprop="name">Moonlight Viewing</h3>
+              <p class="tour-desc" itemprop="description">Experience the ethereal beauty of the Taj Mahal under the full moon (available five days each month, excluding Fridays and Ramadan month).</p>
+              <div class="tour-meta">
+                <span class="duration" itemprop="duration"><i class="fas fa-clock" aria-hidden="true"></i> 2 hours</span>
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">From <span itemprop="price">₹3,800</span></span>
+              </div>
+              <a href="moonlight-tour.html" class="btn btn-primary" aria-label="Book Moonlight Viewing Tour" itemprop="url">Book Now</a>
+            </div>
+          </article>
+          
+          <article class="tour-card" itemscope itemtype="https://schema.org/TouristTrip">
+            <figure>
+              <img src="assets/heritage-tour.webp" 
+                   alt="Taj Mahal with guide explaining architecture" 
+                   loading="lazy" 
+                   width="400" 
+                   height="250"
+                   itemprop="image">
+            </figure>
+            <div class="tour-content">
+              <h3 itemprop="name">Heritage Walk</h3>
+              <p class="tour-desc" itemprop="description">Deep dive into the architectural marvel with our expert guides, covering intricate details, construction techniques, and Mughal history.</p>
+              <div class="tour-meta">
+                <span class="duration" itemprop="duration"><i class="fas fa-clock" aria-hidden="true"></i> 4 hours</span>
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">From <span itemprop="price">₹1,800</span></span>
+              </div>
+              <a href="heritage-tour.html" class="btn btn-primary" aria-label="Book Heritage Walk Tour" itemprop="url">Book Now</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="section-cta">
+          <a href="all-tours.html" class="btn btn-outline">View All Tour Packages</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Visitor Tips Section -->
+    <section class="tips-section" aria-labelledby="tips-heading">
+      <div class="container">
+        <h2 id="tips-heading">Visitor Tips & Information</h2>
+        
+        <div class="tips-grid">
+          <div class="tip-card">
+            <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+            <h3>Tickets & Timings</h3>
+            <ul>
+              <li>Open sunrise to sunset (closed Fridays)</li>
+              <li>Foreigners: ₹1,300 | SAARC: ₹740 | Indians: ₹50</li>
+              <li>Night viewing: ₹750 (limited days)</li>
+            </ul>
+          </div>
+          
+          <div class="tip-card">
+            <i class="fas fa-tshirt" aria-hidden="true"></i>
+            <h3>Dress Code</h3>
+            <ul>
+              <li>Modest clothing recommended</li>
+              <li>Comfortable walking shoes</li>
+              <li>Head coverings for sun protection</li>
+            </ul>
+          </div>
+          
+          <div class="tip-card">
+            <i class="fas fa-camera" aria-hidden="true"></i>
+            <h3>Photography</h3>
+            <ul>
+              <li>Tripods prohibited inside main mausoleum</li>
+              <li>No photography in main tomb chamber</li>
+              <li>Best lighting: sunrise and sunset</li>
+            </ul>
+          </div>
+          
+          <div class="tip-card">
+            <i class="fas fa-wheelchair" aria-hidden="true"></i>
+            <h3>Accessibility</h3>
+            <ul>
+              <li>Wheelchair accessible pathways</li>
+              <li>Free wheelchairs available</li>
+              <li>Special entry for differently-abled</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/logo-white.svg" alt="Incredible India - Ministry of Tourism" width="150" height="70" loading="lazy">
+        <p>Explore India's rich cultural heritage and breathtaking landscapes.</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="itineraries.html">Travel Itineraries</a></li>
+            <li><a href="states.html">States & Union Territories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Taj Mahal</h3>
+          <ul>
+            <li><a href="taj-mahal-history.html">History</a></li>
+            <li><a href="taj-mahal-architecture.html">Architecture</a></li>
+            <li><a href="taj-mahal-tickets.html">Tickets & Timings</a></li>
+            <li><a href="taj-mahal-travel-guide.html">Travel Guide</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="https://facebook.com/incredibleindia" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/incredibleindia" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/incredibleindia" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://youtube.com/incredibleindia" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          </div>
+          <div class="newsletter">
+            <h4>Get Updates</h4>
+            <form method="post" action="/newsletter-subscribe">
+              <label for="newsletter-email" class="visually-hidden">Email for newsletter</label>
+              <input type="email" id="newsletter-email" placeholder="Your email" aria-label="Email for newsletter" required>
+              <button type="submit" aria-label="Subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2023</span> Ministry of Tourism, Government of India. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lazy loading and other performance optimizations -->
+  <script>
+    // Update copyright year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Load non-critical CSS
+    function loadCSS(href) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
+    
+    // Load non-critical JS
+    function loadJS(src, async = true) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = async;
+      document.body.appendChild(script);
+    }
+    
+    // Load these after page load
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(() => {
+        loadCSS('css/non-critical.min.css');
+        loadJS('js/lazy-load.min.js');
+        loadJS('js/menu-toggle.min.js');
+      });
+    } else {
+      window.addEventListener('load', function() {
+        loadCSS('css/non-critical.min.css');
+        loadJS('js/lazy-load.min.js');
+        loadJS('js/menu-toggle.min.js');
+      });
+    }
+    
+    // Service worker registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update URL without jumping
+          if (history.pushState) {
+            history.pushState(null, null, targetId);
+          } else {
+            location.hash = targetId;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
