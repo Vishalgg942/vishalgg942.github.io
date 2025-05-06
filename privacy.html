@@ -3,10 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for Indian Tourism Website - Learn how we collect and use your data">
+  <meta name="description" content="Privacy Policy for Indian Tourism Website">
   <title>Privacy Policy - Indian Tourism</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Basic styling if CSS file is missing */
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #000;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      left: 0;
+    }
+    nav {
+      background: #f8f8f8;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+    .hero {
+      background: #006747;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    .footer-links {
+      margin: 1rem 0;
+    }
+    .footer-links a {
+      color: white;
+      margin: 0 1rem;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to Content Link for Accessibility -->
@@ -104,10 +172,10 @@
       </div>
       <div class="social-links">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
+          [FB]
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <img src="assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
+          [TW]
         </a>
       </div>
     </div>
@@ -116,6 +184,11 @@
   <script>
     // Update copyright year automatically
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Basic error handling
+    window.addEventListener('DOMContentLoaded', (event) => {
+      console.log('Privacy policy page loaded successfully');
+    });
   </script>
 </body>
 </html>
