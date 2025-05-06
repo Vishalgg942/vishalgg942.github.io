@@ -1,102 +1,120 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <!-- [Previous head content remains exactly the same] -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Incredible India | Official Tourism Website</title>
+  <meta name="description" content="Explore India's rich heritage, diverse cultures, and breathtaking landscapes.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-  <!-- Skip to content link -->
+  <!-- Skip to Content Link -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
+
   <!-- Google Search Box -->
   <div class="search-container">
     <script async src="https://cse.google.com/cse.js?cx=f267c5d30f3e6497d"></script>
     <div class="gcse-search"></div>
   </div>
   
-  <!-- Header with corrected logo path -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="header-container">
-      <a href="/index.html" class="logo-link">
-        <img src="/assets/logo.svg" alt="Indian Tourism Logo" width="120" height="60" loading="eager">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="Indian Tourism Logo" width="120" height="60" loading="eager">
       </a>
       
       <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="/index.html" aria-current="page">Home</a></li>
-          <li><a href="/news.html">News</a></li>
-          <li><a href="/places.html">Destinations</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><button id="chatbot-toggle" class="chatbot-btn">Chat with Us</button></li>
+        <ul id="main-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="places.html">Destinations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button id="chatbot-toggle" class="chatbot-btn" aria-expanded="false" aria-label="Open chatbot">Chat with Us</button></li>
         </ul>
       </nav>
       
-      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
         <span class="menu-icon"></span>
       </button>
     </div>
   </header>
 
-  <!-- [Chatbot widget remains same] -->
+  <!-- Chatbot Widget -->
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>Tourism Assistant</h3>
+      <button class="chatbot-close-btn" aria-label="Close chatbot">×</button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="chatbot-message bot-message">Hello! How can I help you with your travel plans?</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Ask about destinations..." aria-label="Chat input">
+      <button aria-label="Send message">→</button>
+    </div>
+  </div>
 
-  <!-- Hero Banner with corrected image path -->
+  <!-- Hero Section -->
   <section class="hero" role="region" aria-labelledby="hero-heading">
     <div class="hero-content">
       <h1 id="hero-heading">Discover Incredible India</h1>
       <p class="subtitle">Explore the land of diverse cultures, rich heritage, and breathtaking landscapes</p>
       
       <div class="cta-buttons">
-        <a href="/places.html" class="btn primary">Explore Destinations</a>
-        <a href="/news.html" class="btn secondary">Latest News</a>
+        <a href="places.html" class="btn primary">Explore Destinations</a>
+        <a href="news.html" class="btn secondary">Latest News</a>
       </div>
     </div>
     
     <div class="hero-image">
-      <img src="/assets/hero-image.jpg" alt="Panoramic view of Indian landscape" loading="eager" width="1600" height="900" decoding="async">
+      <img src="assets/hero-image.jpg" alt="Panoramic view of Indian landscape" loading="eager" width="800" height="450">
     </div>
   </section>
 
   <!-- Main Content -->
   <main id="main-content">
-    <!-- Featured News Section with corrected paths -->
-    <section class="featured-news" aria-labelledby="featured-news-heading">
+    <!-- Featured News Section -->
+    <section class="featured-news" aria-labelledby="news-heading">
       <div class="section-header">
-        <h2 id="featured-news-heading">Tourism Updates</h2>
+        <h2 id="news-heading">Tourism Updates</h2>
         <p class="section-description">Latest developments in Indian tourism sector</p>
       </div>
       
       <div class="news-grid">
         <article class="news-card" tabindex="0">
           <div class="news-image">
-            <img src="/assets/news1.jpg" alt="Tourists visiting Taj Mahal" loading="lazy" width="400" height="300" decoding="async">
+            <img src="assets/news1.jpg" alt="Tourists visiting Taj Mahal" loading="lazy" width="400" height="300">
           </div>
           <div class="news-content">
             <span class="news-category">Visitor Statistics</span>
             <h3>Record Tourism Numbers in 2023</h3>
             <p>India welcomed over 10 million foreign tourists last year, with historical sites being the top attractions.</p>
-            <a href="/news/tourism-boom.html" class="read-more">Read more</a>
+            <a href="news/tourism-boom.html" class="read-more">Read more</a>
           </div>
         </article>
         
         <article class="news-card" tabindex="0">
           <div class="news-image">
-            <img src="/assets/news2.jpg" alt="New facilities at historical site" loading="lazy" width="400" height="300" decoding="async">
+            <img src="assets/news2.jpg" alt="New facilities at historical site" loading="lazy" width="400" height="300">
           </div>
           <div class="news-content">
             <span class="news-category">Facility Upgrade</span>
             <h3>New Amenities at Heritage Sites</h3>
             <p>Government announces multilingual guides and wheelchair access at 50 major monuments.</p>
-            <a href="/news/new-facilities.html" class="read-more">Read more</a>
+            <a href="news/new-facilities.html" class="read-more">Read more</a>
           </div>
         </article>
       </div>
       
       <div class="section-footer">
-        <a href="/news.html" class="btn outline">View All News</a>
+        <a href="news.html" class="btn outline">View All News</a>
       </div>
     </section>
 
-    <!-- Destinations Section with corrected paths -->
+    <!-- Destinations Section -->
     <section class="popular-destinations" aria-labelledby="destinations-heading">
       <div class="section-header">
         <h2 id="destinations-heading">Must-Visit Destinations</h2>
@@ -105,9 +123,9 @@
       
       <div class="destinations-grid">
         <article class="destination-card" tabindex="0">
-          <a href="/places/taj-mahal.html" class="card-link">
+          <a href="places/taj-mahal.html" class="card-link">
             <figure>
-              <img src="/assets/taj-mahal.jpg" alt="Taj Mahal at sunrise" loading="lazy" width="400" height="300">
+              <img src="assets/taj-mahal.jpg" alt="Taj Mahal at sunrise" loading="lazy" width="400" height="300">
               <figcaption>
                 <h3>Taj Mahal</h3>
                 <p>Agra, Uttar Pradesh</p>
@@ -118,29 +136,133 @@
               </figcaption>
             </figure>
           </a>
+          <button class="explore-btn">Explore</button>
         </article>
         
-        <!-- Other destination cards with same pattern -->
+        <article class="destination-card" tabindex="0">
+          <a href="places/red-fort.html" class="card-link">
+            <figure>
+              <img src="assets/red-fort.jpg" alt="Red Fort in Delhi" loading="lazy" width="400" height="300">
+              <figcaption>
+                <h3>Red Fort</h3>
+                <p>Delhi</p>
+                <div class="destination-meta">
+                  <span class="rating">4.7 ★</span>
+                  <span class="category">Historical Monument</span>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+          <button class="explore-btn">Explore</button>
+        </article>
       </div>
       
       <div class="section-footer">
-        <a href="/places.html" class="btn outline">View All Destinations</a>
+        <a href="places.html" class="btn outline">View All Destinations</a>
       </div>
     </section>
 
-    <!-- [Newsletter section remains same] -->
+    <!-- Newsletter Section -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2 id="newsletter-heading">Stay Updated</h2>
+          <p>Subscribe to our newsletter for travel tips and exclusive offers.</p>
+        </div>
+        <div class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+            <button class="btn primary">Subscribe</button>
+          </div>
+          <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer with corrected paths -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
-      <div class="footer-about">
-        <img src="/assets/logo-white.svg" alt="Indian Tourism Logo" width="120" height="60" loading="lazy">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="assets/logo-white.svg" alt="Indian Tourism Logo" width="120" height="60" loading="lazy">
+          <p>Promoting India's rich cultural heritage and natural beauty since 1949.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="guidelines.html">Travel Guidelines</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            Ministry of Tourism, Government of India<br>
+            New Delhi, India - 110001
+          </address>
+          <a href="tel:+911123456789">+91 11 2345 6789</a>
+          <a href="mailto:info@indiantourism.gov.in">info@indiantourism.gov.in</a>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="assets/facebook.svg" alt="Facebook"></a>
+            <a href="https://twitter.com" aria-label="Twitter"><img src="assets/twitter.svg" alt="Twitter"></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram"></a>
+          </div>
+        </div>
       </div>
-      <!-- [Rest of footer content] -->
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Indian Tourism. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </div>
     </div>
   </footer>
 
-  <!-- [Scripts remain same] -->
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainMenu = document.getElementById('main-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mainMenu.classList.toggle('active');
+      mobileMenuBtn.classList.toggle('active');
+    });
+
+    // Chatbot Toggle
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotContainer = document.querySelector('.chatbot-container');
+    const chatbotCloseBtn = document.querySelector('.chatbot-close-btn');
+    
+    chatbotToggle.addEventListener('click', () => {
+      const isExpanded = chatbotToggle.getAttribute('aria-expanded') === 'true';
+      chatbotToggle.setAttribute('aria-expanded', !isExpanded);
+      chatbotContainer.classList.toggle('active');
+    });
+    
+    chatbotCloseBtn.addEventListener('click', () => {
+      chatbotToggle.setAttribute('aria-expanded', 'false');
+      chatbotContainer.classList.remove('active');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
