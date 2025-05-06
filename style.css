@@ -38,6 +38,7 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 /* ===== Typography ===== */
@@ -241,6 +242,7 @@ nav a:hover::after {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .menu-icon {
@@ -249,6 +251,7 @@ nav a:hover::after {
   height: 2px;
   background: var(--text-color);
   position: relative;
+  transition: var(--transition);
 }
 
 .menu-icon::before,
@@ -290,7 +293,7 @@ nav a:hover::after {
   grid-template-columns: 1fr 1fr;
   min-height: 80vh;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .hero-content {
@@ -335,11 +338,17 @@ nav a:hover::after {
   height: auto;
   display: block;
   object-fit: cover;
+  border-radius: var(--border-radius);
 }
 
 /* ===== Featured News ===== */
 .featured-news {
   padding: 5rem 0;
+}
+
+.section-footer {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .news-grid {
@@ -481,6 +490,8 @@ nav a:hover::after {
   font-weight: 600;
   opacity: 0;
   transition: var(--transition);
+  border: none;
+  cursor: pointer;
 }
 
 .destination-card:hover .explore-btn {
@@ -492,6 +503,7 @@ nav a:hover::after {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   color: white;
   padding: 4rem 0;
+  margin-top: 3rem;
 }
 
 .newsletter-container {
@@ -853,5 +865,7 @@ nav a:hover::after {
   
   .chatbot-container {
     width: calc(100% - 2rem);
+    right: 1rem;
+    bottom: 1rem;
   }
 }
