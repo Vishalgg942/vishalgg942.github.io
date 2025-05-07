@@ -37,20 +37,20 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="assets/tajmahal-hero-800.webp" as="image" imagesrcset="assets/tajmahal-hero-800.webp 800w, assets/tajmahal-hero-1200.webp 1200w, assets/tajmahal-hero-1920.webp 1920w" imagesizes="100vw">
+  <link rel="preload" href="assets/images/taj-mahal-sunrise.jpg" as="image">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/styles.min.css">
   <!-- Web Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Google Custom Search Engine (CSE) -->
-  <script async src="https://cse.google.com/cse.js?cx=a08325a0d8fc84b56"></script>
-  <!-- a08325a0d8fc84b56 = Your CSE ID -->
-
-  <!-- (Optional) Google Analytics, Structured Data, etc. -->
+  <!-- Google Custom Search Engine -->
+  <script async src="https://cse.google.com/cse.js?cx=25f5ed2f6f80c4158"></script>
+  
+  <!-- Chatbot SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/chatbotify@latest/dist/chatbotify.min.js"></script>
 </head>
 <body>
   <!-- Skip to Content Link -->
@@ -60,14 +60,15 @@
   <header class="site-header" role="banner">
     <div class="header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/logo.svg" alt="Incredible India - Ministry of Tourism" width="150" height="70" loading="eager">
+        <img src="assets/logo.svg" alt="Incredible India - Ministry of Tourism" width="180" height="80" loading="eager">
       </a>
       <nav aria-label="Main navigation">
         <ul id="main-menu" role="menubar">
-          <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+          <li role="none"><a href="index.html" role="menuitem">Home</a></li>
           <li role="none"><a href="destinations.html" role="menuitem">Destinations</a></li>
           <li role="none"><a href="taj-mahal-tours.html" role="menuitem" class="active">Taj Mahal Tours</a></li>
           <li role="none"><a href="experiences.html" role="menuitem">Experiences</a></li>
+          <li role="none"><a href="about.html" role="menuitem">About</a></li>
           <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
         </ul>
       </nav>
@@ -75,11 +76,14 @@
         <button id="search-toggle" aria-label="Search" aria-expanded="false" aria-controls="search-bar">
           <i class="fas fa-search" aria-hidden="true"></i>
         </button>
-        <a href="book-now.html" class="btn btn-small">Book Now</a>
+        <div class="auth-links">
+          <a href="login.html" class="btn btn-text"><i class="fas fa-user"></i> Sign In</a>
+          <a href="register.html" class="btn btn-small">Register</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
-      <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
-        <span class="menu-icon" aria-hidden="true"></span>
-      </button>
     </div>
     <!-- Search Bar with Google CSE -->
     <div id="search-bar" class="search-bar" aria-hidden="true">
@@ -88,13 +92,13 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" role="region" aria-labelledby="hero-heading">
+  <section class="hero" role="region" aria-labelledby="hero-heading" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/taj-mahal-sunrise.jpg');">
     <div class="hero-content">
-      <h1 id="hero-heading">Experience the Majesty of Taj Mahal</h1>
-      <p class="subtitle">A timeless symbol of love and one of the New Seven Wonders of the World</p>
+      <h1 id="hero-heading">Discover the Eternal Beauty of Taj Mahal</h1>
+      <p class="subtitle">UNESCO World Heritage Site & One of the New Seven Wonders of the World</p>
       <div class="cta-buttons">
-        <a href="taj-mahal-tours.html" class="btn btn-primary">Explore Tours</a>
-        <a href="#virtual-tour" class="btn btn-outline">Virtual Tour</a>
+        <a href="#featured-tours" class="btn btn-primary">Explore Tours</a>
+        <a href="#virtual-tour" class="btn btn-outline">Virtual Experience</a>
       </div>
     </div>
     <a href="#main-content" class="scroll-down" aria-label="Scroll to main content">
@@ -105,67 +109,124 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <!-- ...rest of your page content... -->
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="assets/logo.svg" alt="Incredible India Logo" width="150" height="70">
-        <p>Official website of the Ministry of Tourism, Government of India.</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="taj-mahal-tours.html">Taj Mahal Tours</a></li>
-            <li><a href="experiences.html">Experiences</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Follow Us</h3>
-          <div class="social-links">
-            <a href="https://facebook.com/incredibleindia" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/incredibleindia" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/incredibleindia" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <!-- Introduction Section -->
+    <section class="intro-section" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="intro-content">
+          <h2 id="intro-heading">The Crown Jewel of Mughal Architecture</h2>
+          <p>Built by Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, the Taj Mahal stands as an eternal symbol of love. This ivory-white marble mausoleum attracts millions of visitors annually with its breathtaking beauty and intricate craftsmanship.</p>
+          <div class="key-facts">
+            <div class="fact-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Built: 1632-1653</span>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-archway"></i>
+              <span>Architectural Style: Mughal</span>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-landmark"></i>
+              <span>UNESCO Site: Since 1983</span>
+            </div>
           </div>
         </div>
-        <div class="footer-column">
-          <h3>Newsletter</h3>
-          <form class="newsletter" action="/subscribe" method="post">
-            <label for="newsletter-email" class="visually-hidden">Email address</label>
-            <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
-            <button type="submit">Subscribe</button>
-          </form>
+        <div class="intro-image">
+          <img src="assets/images/taj-mahal-closeup.jpg" alt="Close-up view of Taj Mahal's intricate marble work" loading="lazy">
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2025 Incredible India. All rights reserved.
-        <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- (Optional) JS for toggling search bar on mobile, etc. -->
-  <script>
-    // Example: Toggle search bar visibility
-    const searchToggle = document.getElementById('search-toggle');
-    const searchBar = document.getElementById('search-bar');
-    if (searchToggle && searchBar) {
-      searchToggle.addEventListener('click', function() {
-        const expanded = searchToggle.getAttribute('aria-expanded') === 'true';
-        searchToggle.setAttribute('aria-expanded', !expanded);
-        searchBar.setAttribute('aria-hidden', expanded);
-      });
-    }
-  </script>
-</body><script async src="https://cse.google.com/cse.js?cx=25f5ed2f6f80c4158">
-</script>
-<div class="gcse-search"></div>
-</html>
+    <!-- Featured Tours Section -->
+    <section id="featured-tours" class="tours-section" aria-labelledby="tours-heading">
+      <div class="container">
+        <h2 id="tours-heading">Premium Taj Mahal Experiences</h2>
+        <p class="section-subtitle">Choose from our curated selection of tours</p>
+        
+        <div class="tour-cards">
+          <!-- Sunrise Tour -->
+          <div class="tour-card">
+            <div class="card-image">
+              <img src="assets/images/sunrise-tour.jpg" alt="Taj Mahal at sunrise" loading="lazy">
+              <span class="badge">Most Popular</span>
+            </div>
+            <div class="card-content">
+              <h3>Sunrise Tour</h3>
+              <p class="duration"><i class="fas fa-clock"></i> 4 hours</p>
+              <p class="description">Witness the Taj Mahal transform at dawn as the first rays of sunlight illuminate the marble.</p>
+              <ul class="highlights">
+                <li>Exclusive early entry</li>
+                <li>Photography tips from experts</li>
+                <li>Breakfast at 5-star hotel</li>
+              </ul>
+              <div class="price">From ₹2,500 per person</div>
+              <a href="book-sunrise.html" class="btn btn-small">Book Now</a>
+            </div>
+          </div>
+          
+          <!-- Moonlight Tour -->
+          <div class="tour-card">
+            <div class="card-image">
+              <img src="assets/images/moonlight-tour.jpg" alt="Taj Mahal under moonlight" loading="lazy">
+              <span class="badge">Limited Availability</span>
+            </div>
+            <div class="card-content">
+              <h3>Moonlight Viewing</h3>
+              <p class="duration"><i class="fas fa-clock"></i> 2 nights/month</p>
+              <p class="description">Experience the magical view of Taj Mahal under the full moon (available 5 days each month).</p>
+              <ul class="highlights">
+                <li>Special night viewing tickets</li>
+                <li>Expert historian guide</li>
+                <li>Complimentary refreshments</li>
+              </ul>
+              <div class="price">₹3,800 per person</div>
+              <a href="book-moonlight.html" class="btn btn-small">Check Dates</a>
+            </div>
+          </div>
+          
+          <!-- Heritage Walk -->
+          <div class="tour-card">
+            <div class="card-image">
+              <img src="assets/images/heritage-walk.jpg" alt="Guided tour of Taj Mahal" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Architectural Heritage Walk</h3>
+              <p class="duration"><i class="fas fa-clock"></i> 6 hours</p>
+              <p class="description">In-depth exploration of the Taj complex with our certified architectural guides.</p>
+              <ul class="highlights">
+                <li>Detailed architectural analysis</li>
+                <li>Access to restricted areas</li>
+                <li>Includes Agra Fort visit</li>
+              </ul>
+              <div class="price">From ₹4,200 per person</div>
+              <a href="book-heritage.html" class="btn btn-small">Book Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="view-all">
+          <a href="all-tours.html" class="btn btn-outline">View All Tour Packages (12+)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section id="virtual-tour" class="virtual-section" aria-labelledby="virtual-heading">
+      <div class="container">
+        <h2 id="virtual-heading">Virtual Taj Mahal Experience</h2>
+        <p class="section-subtitle">Explore from anywhere in the world</p>
+        
+        <div class="virtual-content">
+          <div class="virtual-player">
+            <div class="video-placeholder">
+              <img src="assets/images/virtual-tour-thumbnail.jpg" alt="Virtual tour of Taj Mahal" loading="lazy">
+              <button class="play-button" aria-label="Play virtual tour">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          <div class="virtual-features">
+            <h3>Features:</h3>
+            <ul>
+              <li><i class="fas fa-vr-cardboard"></i> 360° panoramic views</li>
+              <li><i class="fas fa-headphones"></i> Audio guide in 12 languages</li>
+              <li><i class="fas fa-history"></i> Historical reconstruction views
